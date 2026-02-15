@@ -86,7 +86,7 @@ export async function getBlogEntries(config: StarlightBlogConfig, locale: Locale
   const blogEntriesPerLocale = getBlogEntriesPerLocale(config, locale)
   if (blogEntriesPerLocale) return blogEntriesPerLocale
 
-  const docEntries = await getCollection('docs')
+  const docEntries = await getCollection('leetcode')
   const blogEntries: StarlightEntry[] = []
 
   const contentRelativePath = `${context.srcDir.replace(context.rootDir, '')}content/docs/`
@@ -100,7 +100,7 @@ export async function getBlogEntries(config: StarlightBlogConfig, locale: Locale
       fileRelativePath?.startsWith(`${getPathWithLocale(config.prefix, DefaultLocale)}/`) &&
       fileRelativePath !== `${getPathWithLocale(config.prefix, DefaultLocale)}/index.mdx`
 
-    if (isDefaultLocaleEntry) {
+    if (isDefaultLocaleEntry || true) {
       if (locale === DefaultLocale) {
         blogEntries.push(entry)
         continue
