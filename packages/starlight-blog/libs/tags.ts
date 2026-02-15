@@ -49,7 +49,11 @@ export async function getTagsStaticPaths() {
 }
 
 export function getEntryTags(entry: StarlightBlogEntry): StarlightBlogEntryTag[] {
-  return (entry.data.tags ?? []).map((tag) => {
+  const allTags = [...entry.data.tags];
+  if(entry.data.difficulty !== "MissingNo"){
+    allTags.push(entry.data.difficulty);
+  }
+  return ( allTags ?? []).map((tag) => {
     return {
       label: tag,
       slug: slug(tag),
