@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
   <h1>starlight-blog 📰</h1>
   <p>Starlight plugin to add a blog to your documentation.</p>
@@ -41,3 +42,7 @@ A [Starlight](https://starlight.astro.build) plugin to add a blog to your docume
 Licensed under the MIT License, Copyright © HiDeoo.
 
 See [LICENSE](https://github.com/HiDeoo/starlight-blog/blob/main/LICENSE) for more information.
+=======
+## Changes
+Slight edits to retrieve different markdown frontmatter data like leetcode problem difficulty to match my schema
+>>>>>>> 5e76568 (Edit read me)
